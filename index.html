@@ -29,12 +29,12 @@
         </header>
         <!-- / Header -->
 
-        <!-- Page main content -->
-        <section class="content">            
+        <!-- Main content -->
+        <section class="main-content">
 
-            <!-- Main content -->
-            <section class="main-content">
-                
+            <!-- Page main content -->
+            <section class="content">           
+
                 <div class="title">
                     <h1>My Profile</h1>
                 </div>
@@ -52,21 +52,27 @@
                 </div>
                 
                 <div class="introduction box-content">
-                    <h2>Introduction</h2>
-                    <p>Take a brief moment to introduce yourself and increase your Profile strenght by 25%</p>
-                    <a href="#" title="Add">Add</a>
+                    <div class="box-content-info">
+                        <h2>Introduction</h2>
+                        <p>Take a brief moment to introduce yourself and increase your Profile strenght by 25%</p>
+                        <a href="#" title="Add">Add</a>
+                    </div>
                 </div>
 
                 <div class="experience box-content">
-                    <h2>Experience</h2>
-                    <p>Add your experience to increase your Profile strenght by 25%</p>
-                    <a href="#" title="Add">Add</a>
+                    <div class="box-content-info">
+                        <h2>Experience</h2>
+                        <p>Add your experience to increase your Profile strenght by 25%</p>
+                        <a href="#" title="Add">Add</a>
+                    </div>
                 </div>
 
                 <div class="education box-content">
-                    <h2>Education</h2>
-                    <p>Add your education to increase your Profile strenght by 25%</p>
-                    <a href="#" title="Add">Add</a>
+                    <div class="box-content-info">
+                        <h2>Education</h2>
+                        <p>Add your education to increase your Profile strenght by 25%</p>
+                        <a href="#" title="Add">Add</a>
+                    </div>
                 </div>
 
             </section>
@@ -75,4 +81,19 @@
         </section>
         <!-- / Page main content -->
     </body>
+
+<script>
+    $(document).ready( function() {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 10) {
+                $("header").addClass("fixed");
+            } else {
+                $("header").removeClass("fixed");
+            }
+        });
+    });
+</script>
+
 </html>
