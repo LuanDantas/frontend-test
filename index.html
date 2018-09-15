@@ -55,7 +55,7 @@
                     <div class="box-content-info">
                         <h2>Introduction</h2>
                         <p>Take a brief moment to introduce yourself and increase your Profile strenght by 25%</p>
-                        <a href="#" title="Add">Add</a>
+                        <a href="javascript:;" class="action-button" title="Add" onclick="openModal();">Add</a>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@
                     <div class="box-content-info">
                         <h2>Experience</h2>
                         <p>Add your experience to increase your Profile strenght by 25%</p>
-                        <a href="#" title="Add">Add</a>
+                        <a href="javascript:;" class="action-button" title="Add">Add</a>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                     <div class="box-content-info">
                         <h2>Education</h2>
                         <p>Add your education to increase your Profile strenght by 25%</p>
-                        <a href="#" title="Add">Add</a>
+                        <a href="javascript:;" class="action-button" title="Add">Add</a>
                     </div>
                 </div>
 
@@ -80,20 +80,45 @@
 
         </section>
         <!-- / Page main content -->
+
+        <!-- Modal -->
+        <section class="modal">
+            <div class="modal-center">
+                <div class="modal-content">
+                    <a href="javascript:;" class="close" onclick="closeModal();">Close</a>
+                    <h2>Introduce Yourself</h2>
+                    <p>Add a small introduction about yourself, outlining your career to date, and the career path that you would like to
+                        take.</p>
+                    <p>Showcase your strengh and values, along with your personality.</p>
+                    <textarea placeholder="Notes"></textarea>
+                    <input type="submit" class="action-button" value="Save">
+                </div>
+            </div>
+        </section>
+        <!-- / Modal -->
+
     </body>
 
-<script>
-    $(document).ready( function() {
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
+    <script>
+        $(document).ready( function() {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
 
-            if (scroll >= 10) {
-                $("header").addClass("fixed");
-            } else {
-                $("header").removeClass("fixed");
-            }
+                if (scroll >= 10) {
+                    $("header").addClass("fixed");
+                } else {
+                    $("header").removeClass("fixed");
+                }
+            });
         });
-    });
-</script>
+
+        function openModal() {
+            $('.modal').fadeIn(500);
+        }
+
+        function closeModal() {
+            $('.modal').fadeOut(500);
+        }
+    </script>
 
 </html>
