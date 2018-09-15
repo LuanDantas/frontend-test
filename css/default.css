@@ -1,3 +1,8 @@
+/*
+    This css file contains the default styles and comportaments,
+    that can be use for all the project.
+*/
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -50,6 +55,47 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+/* Header */
+header {
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.fixed {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.header-nav {
+  display: block;
+  width: 100%;
+}
+
+.header-nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.header-nav ul li {
+  display: block; 
+}
+
+.header-nav ul li a {
+  display: block;
+  font-size: 14px;
+  color: #898989;
+  text-transform: uppercase;
+  padding: 25px 20px;
+}
+
+.header-nav ul li a:hover {
+  background-color: #fbfbfb;
+  transition: 0.6s;
 }
 
 /* Content Style */
