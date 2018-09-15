@@ -11,6 +11,12 @@
   padding-top: 64px;
 }
 
+@media only screen and (max-width: 720px) {
+  .main-content {
+    padding-top: 55px;
+  }
+}
+
 /* Title */
 .title {
   display: block;
@@ -36,16 +42,34 @@
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 920px) {
+    .progress {
+        width: 100%;
+    }
+}
+
 .progress p {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 479px) {
+    .progress p  {
+        line-height: 24px;
+    }
+}
+
 .progress-content {
   display: block;
   width: 50%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .progress-content {
+        width: 100%;
+    }
 }
 
 .progress-content span {

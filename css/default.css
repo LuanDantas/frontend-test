@@ -3,6 +3,13 @@
     that can be use for all the project.
 */
 
+:root {
+    --bp-large: 1280px;
+    --bp-medium: 920px;
+    --bp-small: 720px;
+    --bp-xsmall: 479px;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -65,6 +72,12 @@ header {
   position: fixed;
 }
 
+@media only screen and (max-width: 720px) {
+    header {
+        display: none;
+    }
+}
+
 .fixed {
   border-bottom: 1px solid #f4f4f4;
 }
@@ -81,6 +94,12 @@ header {
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 920px) {
+    .header-nav ul {
+        justify-content: space-between;
+    }
+}
+
 .header-nav ul li {
   display: block; 
 }
@@ -93,16 +112,39 @@ header {
   padding: 25px 20px;
 }
 
+@media only screen and (max-width: 720px) {
+    .header-nav ul li a {
+        padding: 25px 10px;
+    }
+}
+
 .header-nav ul li a:hover {
   background-color: #fbfbfb;
   transition: 0.6s;
 }
+
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+}
+
+/* @media only screen and (max-width: 720px) {
+    .mobile-menu {
+        display: block;
+    }
+} */
 
 /* Content Style */
 .content {
   display: block;
   width: 1440px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1280px) {
+    .content {
+        width: 95%;
+    }
 }
 
 /* Action Button */
@@ -137,11 +179,23 @@ header {
   margin-top: 30px;
 }
 
+@media only screen and (max-width: 920px) {
+    .box-content {
+        width: 100%;
+    }
+}
+
 .box-content-info {
     display: block;
     width: 38%;
     text-align: center;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 920px) {
+    .box-content-info {
+        width: 100%;
+    }
 }
 
 .box-content-info h2 {
@@ -185,6 +239,21 @@ header {
     text-align: center;
     position: relative;
     padding: 60px 55px;
+}
+
+@media only screen and (max-width: 920px) {
+    .modal-content {
+        width: 80%;
+        height: 90%;
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .modal-content {
+        width: 90%;
+        padding: 40px 30px;
+    }
 }
 
 .modal .close {

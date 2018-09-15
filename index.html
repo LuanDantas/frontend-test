@@ -10,6 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Slick Mobile Menu -->
+        <link rel="stylesheet" href="css/slicknav.css" />
+        <script src="js/jquery.slicknav.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -17,6 +21,17 @@
             <div class="content">
                 <nav class="header-nav">
                     <ul>
+                        <li><a href="javascript:;" title="My Dashboard">My Dashboard</a></li>
+                        <li><a href="javascript:;" title="Jobs">Jobs</a></li>
+                        <li><a href="javascript:;" title="Companies">Companies</a></li>
+                        <li><a href="javascript:;" title="Inside Look">Inside Look</a></li>
+                        <li><a href="javascript:;" title="How It Works">How It Works</a></li>
+                        <li><a href="javascript:;" title="For Employers">For Employers</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="mobile-menu">
+                    <ul id="menuMobile">
                         <li><a href="javascript:;" title="My Dashboard">My Dashboard</a></li>
                         <li><a href="javascript:;" title="Jobs">Jobs</a></li>
                         <li><a href="javascript:;" title="Companies">Companies</a></li>
@@ -106,10 +121,13 @@
 
                 if (scroll >= 10) {
                     $("header").addClass("fixed");
+                    $(".slicknav_menu").addClass("fixed");
                 } else {
                     $("header").removeClass("fixed");
                 }
             });
+
+            $('#menuMobile').slicknav();
         });
 
         function openModal() {
