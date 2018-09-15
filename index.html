@@ -5,16 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Teste Front End</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-        <script src="main.js"></script>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <!-- Page main content -->
-        <section class="content">
-
-            <!-- Header -->
-            <header>
-                <nav>
+        <!-- Header -->
+        <header>
+            <div class="content">
+                <nav class="header-nav">
                     <ul>
                         <li><a href="#" title="My Dashboard">My Dashboard</a></li>
                         <li><a href="#" title="Jobs">Jobs</a></li>
@@ -24,15 +25,29 @@
                         <li><a href="#" title="For Employers">For Employers</a></li>
                     </ul>
                 </nav>
-            </header>
-            <!-- / Header -->
+            </div>
+        </header>
+        <!-- / Header -->
+
+        <!-- Page main content -->
+        <section class="content">            
 
             <!-- Main content -->
             <section class="main-content">
-                <h1>My Profile</h1>
+                
+                <div class="title">
+                    <h1>My Profile</h1>
+                </div>
                 
                 <div class="progress">
-                    <h2>Progress Bar</h2>
+                    <div class="progress-content">
+                        <span>Progress: 30%</span>
+                        <progress max="100" value="30">
+                            <div class="progress-bar">
+                                <span style="width: 30%;">Progress: 30%</span>
+                            </div>
+                        </progress>
+                    </div>
                     <p>Complete 60% to apply for jobs and let companies know you're interested</p>
                 </div>
                 
